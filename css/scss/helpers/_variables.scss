@@ -1,0 +1,21 @@
+$maxMobile: "(max-width: 767px)";
+$minSmall: "(min-width: 768px)";
+$maxSmall: "(max-width: 991px)";
+$minMedium: "(min-width: 992px)";
+$minLarge: "(min-width: 1200px)";
+/* فايدته لو عاوز تخلي العنصر يدي نفس الريسبونسيف للميديا اللي بعده واللي بعده 
+ ex:-    @media #{$minMedium} {
+      float: $float-left;
+      width: (100% / 3); }
+     large دا كدا بيدي نفس الخصائص بتاعته للميديا  ال 
+      */
+
+$redColor: #e2494c;
+$greyColor: #9c9c9c;
+$pcolor: #555;
+
+$float-left: left;
+$float-right: right;
+
+$text-right: right;
+$text-left: left;

@@ -1,0 +1,28 @@
+* {
+  @include prefixer(box-sizing, border-box, webkit o);
+}
+.container {
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+
+  @include mediaQ(small) {
+    width: 750px;
+  }
+  @include mediaQ(medium) {
+    width: 970px;
+  }
+  @include mediaQ(large) {
+    width: 1170px;
+  }
+}
+.clearfix {
+  clear: both;
+}
+
+.text-center-xs {
+  @include mediaQ(mobile) {
+    text-align: center;
+  }
+}

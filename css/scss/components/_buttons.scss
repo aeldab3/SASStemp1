@@ -1,0 +1,36 @@
+.main-button {
+  background-color: rgba($redColor, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 6px;
+  text-transform: uppercase;
+  min-width: 120px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    background-color: $redColor;
+  }
+}
+.toggle-menu {
+  background: none;
+  border: none;
+  width: 50px;
+  cursor: pointer;
+  margin-top: 15px;
+  left: 87%;
+  bottom: 75px;
+  display: none;
+  position: relative;
+  @include mediaQ(mobile) {
+    display: block;
+  }
+  span {
+    height: 6px;
+    background-color: $redColor;
+    display: block;
+    margin-bottom: 4px;
+  }
+}

@@ -1,0 +1,51 @@
+// Media Queries Mixin
+@mixin mediaQ($media) {
+  @if $media == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $media == small {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $media == medium {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $media == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+//Overlay Mixin
+@mixin overlay($color, $alpha) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($color, $alpha);
+}
+
+//Prefix Mixin
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-'+ $prefix + '-' +  $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+// Animation Mixin
+@mixin keyF($anim-name) {
+  @-webkit-keyframes #{$anim-name} {
+    @content;
+  }
+  @-moz-keyframes #{$anim-name} {
+    @content;
+  }
+  @keyframes #{$anim-name} {
+    @content;
+  }
+}
